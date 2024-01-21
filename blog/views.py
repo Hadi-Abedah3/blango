@@ -4,8 +4,10 @@ from .models import Post
 from .forms import CommentForm
 import logging  
 
+
 logger = logging.getLogger(__name__)
 # Create your views here.
+
 
 def index(request):
     posts = Post.objects.filter(published_at__lte=timezone.now())
