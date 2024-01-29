@@ -27,6 +27,7 @@ urlpatterns = [
     path("", blog.views.index),
     path("post/<slug>/", blog.views.post_detail, name="blog-post-detail"),
     path("ip/", blog.views.get_ip),
+    path("accounts/", include("allauth.urls")),
 ]
 
 if settings.DEBUG:
